@@ -1,7 +1,7 @@
 # D:\AI\JAX\data_pipeline\core.py
 
 from typing import List, Dict, Optional, Tuple, Any
-from .config import TemplateConfig, ProcessingFlags, ROLE_MAPPING
+from .config import TemplateConfig, JAXelFlags, ROLE_MAPPING
 from .utils import get_logger, clean_text, find_sublist_indices
 
 logger = get_logger(__name__)
