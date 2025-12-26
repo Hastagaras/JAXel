@@ -2,14 +2,14 @@
 
 import numpy as np
 from typing import List, Dict, Any, Optional, Iterator, Tuple
-from .config import ProcessingFlags
+from .config import JAXelFlags
 from .templates import get_template_config
 from .utils import get_logger
 from .core import process_conversation_content, generate_chat_labels, pack_sequences
 
 logger = get_logger(__name__)
 
-class JAXConversationDataset:
+class JAXelDataset:
     def __init__(self, tokenizer: Any, dataset: List[Dict], flags: Optional[Dict] = None):
         """
         Initializes the dataset, processes all items, and prepares them for iteration.

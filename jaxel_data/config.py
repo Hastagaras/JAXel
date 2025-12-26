@@ -21,10 +21,9 @@ class TemplateConfig:
     ds_end_assistant_marker_ids: List[int] = field(default_factory=list)
 
 @dataclass
-class ProcessingFlags:
+class JAXelFlags:
     """
-    Consolidated configuration flags for the pipeline.
-    This replaces the loose dictionary lookups (FLAGS.get(...)).
+    Consolidated configuration flags for the JAXel pipeline.
     """
     # Length configurations
     max_length_chat: int = 8192
