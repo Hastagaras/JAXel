@@ -1,5 +1,3 @@
-# D:\AI\JAX\data_pipeline\core.py
-
 from typing import List, Dict, Optional, Tuple, Any
 from .config import TemplateConfig, JAXelFlags, ROLE_MAPPING
 from .utils import get_logger, clean_text, find_sublist_indices
@@ -8,7 +6,7 @@ logger = get_logger(__name__)
 
 def process_conversation_content(
     messages: List[Dict], 
-    flags: ProcessingFlags, 
+    flags: JAXelFlags, 
     template: TemplateConfig, 
     tokenizer: Any,
     special_tokens: Dict[str, List[int]],
@@ -168,7 +166,7 @@ def process_conversation_content(
 
 def generate_chat_labels(
     sequence_ids: List[int], 
-    flags: ProcessingFlags, 
+    flags: JAXelFlags, 
     template: TemplateConfig, 
     tokenizer: Any,
     special_tokens: Dict[str, List[int]],
