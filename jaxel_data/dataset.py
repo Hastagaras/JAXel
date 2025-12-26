@@ -19,7 +19,7 @@ class JAXelDataset:
         self.flags_dict = flags or {}
         
         # 1. Initialize Configuration
-        self.config = ProcessingFlags(
+        self.config = JAXelFlags(
             max_length_chat=self.flags_dict.get('MAX_LENGTH_CHAT', 8192),
             max_length_completion=self.flags_dict.get('MAX_LENGTH_COMPLETION', 8192),
             label_masking_mode=self.flags_dict.get('LABEL_MASKING_MODE', 'all_assistant'),
